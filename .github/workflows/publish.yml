@@ -85,8 +85,18 @@ jobs:
         with:
           node-version: 22
           registry-url: https://registry.npmjs.org
+          package-manager-cache: false
+
+      - name: Ensure npm supports trusted publishing
+        run: |
+          npm install -g npm@latest
+          node --version
+          npm --version
+          NPM_VERSION=$(npm --version | cut -d. -f1)
+          if [ "$NPM_VERSION" -lt 11 ]; then
+            echo "npm 11.5.1+ is required for trusted publishing"
+            exit 1
+          fi
 
       - name: Publish
         run: npm publish --provenance --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

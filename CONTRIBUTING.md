@@ -159,24 +159,30 @@ The npm package uses independent semver (currently `3.0.0`). The Wynncraft API r
 
 ## Publishing to npm
 
-Publishing runs in GitHub Actions — no local `npm publish` needed.
+Publishing runs in GitHub Actions via [npm trusted publishing](https://docs.npmjs.com/trusted-publishers) (OIDC). No long-lived `NPM_TOKEN` is required for `npm publish`.
 
-### One-time setup
+### One-time setup (npmjs.com)
 
-1. Create an npm [granular access token](https://www.npmjs.com/settings/~your-user/tokens) with **Publish** permission for `@wynnjs/api` (or the whole `@wynnjs` scope).
-2. In the GitHub repo, go to **Settings → Secrets and variables → Actions** and add:
-   - `NPM_TOKEN` — the token from step 1
+1. Ensure `@wynnjs/api` exists under your npm account or org (first publish creates it).
+2. Open **Packages → `@wynnjs/api` → Settings → Trusted publishing**.
+3. Select **GitHub Actions** and configure:
+   - **Repository owner:** `jakehwll`
+   - **Repository name:** `wynnjs`
+   - **Workflow filename:** `publish.yml` (filename only, not the path)
+   - **Environment:** leave blank (this workflow does not use a GitHub Environment)
+4. Save the trusted publisher.
+5. Optional hardening (recommended with 2FA): **Settings → Publishing access → Require two-factor authentication and disallow tokens**. Trusted publishing still works; revoke any old automation publish tokens.
 
-Optional: enable [npm trusted publishing](https://docs.npmjs.com/trusted-publishers) for this repo so you can drop the long-lived token later.
+`package.json` `repository.url` must match the GitHub repo (`git+https://github.com/jakehwll/wynnjs.git`).
 
 ### Release flow
 
 1. Bump `version` in `package.json` and add a `CHANGELOG.md` entry.
 2. Merge to `main`.
 3. Create a GitHub Release with tag `vX.Y.Z` (must match `package.json`, e.g. `v3.0.0`).
-4. The [Publish workflow](.github/workflows/publish.yml) runs CI, verifies the tag, and publishes with provenance.
+4. The [Publish workflow](.github/workflows/publish.yml) runs CI, verifies the tag, and publishes with provenance via OIDC.
 
-To publish without a release (e.g. first push), use **Actions → Publish → Run workflow** on `main` after `NPM_TOKEN` is set.
+To publish without a release, use **Actions → Publish → Run workflow** on `main`.
 
 ## License
 
