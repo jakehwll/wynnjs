@@ -1,0 +1,39 @@
+{
+  "id": "archer",
+  "name": "Archer (Hunter)",
+  "lore": "Precision is the key to victory. The archer sits comfortably at range to decimate their enemies with powerful projectiles. Evading and dodging enemies attacks is crucial to the playstyle of this class. Archers dish out huge amounts of damage, but aren’t so adept at defending themselves.",
+  "overallDifficulty": 1,
+  "overallMax": 3,
+  "archetypes": {
+    "boltslinger": {
+      "name": "&e&lBoltslinger",
+      "difficulty": 1,
+      "max": 3,
+      "icon": "abilityTree.boltslinger",
+      "damage": 3,
+      "defence": 1,
+      "range": 2,
+      "speed": 3
+    },
+    "sniper": {
+      "name": "&d&lSharpshooter",
+      "difficulty": 2,
+      "max": 3,
+      "icon": "abilityTree.sharpshooter",
+      "damage": 3,
+      "defence": 1,
+      "range": 3,
+      "speed": 2
+    },
+    "trapper": {
+      "name": "&2&lTrapper",
+      "difficulty": 2,
+      "max": 3,
+      "icon": "abilityTree.trapper",
+      "damage": 2,
+      "defence": 2,
+      "range": 2,
+      "speed": 2
+    }
+  }
+}

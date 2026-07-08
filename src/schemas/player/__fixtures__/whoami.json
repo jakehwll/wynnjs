@@ -1,0 +1,15 @@
+{
+  "98bc2236-ada5-4039-b560-8aaa4cc50384": {
+    "username": "Nepmia",
+    "online": false,
+    "nickname": "Neplicopter",
+    "rank": "WebDev",
+    "supportRank": "champion",
+    "shortenedRank": "WebDev",
+    "legacyRankColour": {
+      "main": "#aa0000",
+      "sub": "#ff5555"
+    },
+    "rankBadge": "nextgen/badges/rank_webdev.svg"
+  }
+}

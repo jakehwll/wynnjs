@@ -1,0 +1,15 @@
+{
+  "error": "MultipleObjectsReturned",
+  "detail": "Query returned multiple results.",
+  "code": 300,
+  "objects": {
+    "98bc2236-ada5-4039-b560-8aaa4cc50384": {
+      "username": "ExamplePlayer",
+      "uuid": "98bc2236-ada5-4039-b560-8aaa4cc50384"
+    },
+    "00000000-0000-4000-8000-000000000002": {
+      "username": "ExamplePlayerAlt",
+      "uuid": "00000000-0000-4000-8000-000000000002"
+    }
+  }
+}

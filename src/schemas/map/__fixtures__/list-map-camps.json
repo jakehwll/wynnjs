@@ -1,0 +1,25 @@
+[
+  {
+    "name": "The Corkus Traversal",
+    "internalName": "corkusCamp1",
+    "type": "CAMP",
+    "lore": null,
+    "difficulty": "MEDIUM",
+    "level": 90,
+    "length": "MEDIUM",
+    "requirements": [],
+    "location": {
+      "x": 1,
+      "y": 2,
+      "z": 3
+    },
+    "rewards": [
+      {
+        "name": "Liquified Emerald",
+        "type": "CURRENCY",
+        "amount": 2,
+        "always": false
+      }
+    ]
+  }
+]

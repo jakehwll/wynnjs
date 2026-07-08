@@ -1,0 +1,33 @@
+{
+  "Ragni": {
+    "guild": {
+      "uuid": "adb5f0b5-5289-439c-9293-a29d220e7152",
+      "name": "Spectral Cabbage",
+      "prefix": "SPC",
+      "hq": "Detlas"
+    },
+    "acquired": "2026-04-23T14:33:23.733000Z",
+    "hq": false,
+    "resources": [
+      {
+        "type": "EMERALD",
+        "generation": 3600,
+        "stored": 1800,
+        "limit": 9000
+      },
+      {
+        "type": "ORE",
+        "generation": 900,
+        "stored": 450,
+        "limit": 2400
+      }
+    ],
+    "links": ["Katoa Ranch", "Maltic"],
+    "treasury": "MEDIUM",
+    "defences": "HIGH",
+    "location": {
+      "start": [-955, -1415],
+      "end": [-756, -1748]
+    }
+  }
+}

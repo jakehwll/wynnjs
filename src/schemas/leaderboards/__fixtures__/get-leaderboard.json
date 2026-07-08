@@ -1,0 +1,132 @@
+{
+  "1": {
+    "metaScore": 1288017050117652,
+    "name": "Nepmia",
+    "uuid": "98bc2236-ada5-4039-b560-8aaa4cc50384",
+    "prefix": "SPC",
+    "score": 1288,
+    "metadata": {
+      "totalLevel": 1705,
+      "xp": 76520659687,
+      "playtime": 3648.5
+    },
+    "characterUuid": "5b6ab8a0-8f7c-4f50-bd2c-bfabe22d74bc",
+    "characterType": "assassin",
+    "characterData": {
+      "type": "ASSASSIN",
+      "reskin": "NINJA",
+      "nickname": "Neplicopter",
+      "level": 106,
+      "xp": 53307528,
+      "xpPercent": 100,
+      "totalLevel": 369,
+      "gamemode": [],
+      "meta": {
+        "died": false
+      },
+      "preEconomy": null,
+      "contentCompletion": 1860,
+      "wars": 6,
+      "playtime": 2485.42,
+      "mobsKilled": 470208,
+      "chestsFound": 3033,
+      "itemsIdentified": 42,
+      "blocksWalked": 123456,
+      "logins": 128,
+      "deaths": 666,
+      "discoveries": 120,
+      "pvp": {
+        "kills": 443,
+        "deaths": 666
+      },
+      "skillPoints": {
+        "strength": 0,
+        "dexterity": 0,
+        "intelligence": 0,
+        "defence": 0,
+        "agility": 0
+      },
+      "professions": {
+        "fishing": {
+          "level": 73,
+          "xpPercent": 41
+        },
+        "woodcutting": {
+          "level": 52,
+          "xpPercent": 88
+        },
+        "mining": {
+          "level": 68,
+          "xpPercent": 17
+        },
+        "farming": {
+          "level": 91,
+          "xpPercent": 64
+        },
+        "scribing": {
+          "level": 39,
+          "xpPercent": 22
+        },
+        "jeweling": {
+          "level": 57,
+          "xpPercent": 79
+        },
+        "alchemism": {
+          "level": 44,
+          "xpPercent": 35
+        },
+        "cooking": {
+          "level": 28,
+          "xpPercent": 93
+        },
+        "weaponsmithing": {
+          "level": 61,
+          "xpPercent": 11
+        },
+        "tailoring": {
+          "level": 34,
+          "xpPercent": 58
+        },
+        "woodworking": {
+          "level": 49,
+          "xpPercent": 84
+        },
+        "armouring": {
+          "level": 72,
+          "xpPercent": 26
+        }
+      },
+      "dungeons": {
+        "total": 2,
+        "list": {
+          "Decrepit Sewers": 1,
+          "Corrupted Decrepit Sewers": 1
+        }
+      },
+      "raids": {
+        "total": 1,
+        "list": {
+          "Nest of the Grootslangs": 1
+        }
+      },
+      "worldEvents": 2,
+      "lootruns": 1,
+      "caves": 43,
+      "quests": ["A Journey Beyond"],
+      "restrictions": {
+        "characterDataAccess": false,
+        "characterBuildAccess": false
+      },
+      "removedStat": []
+    },
+    "rank": "WebDev",
+    "supportRank": "champion",
+    "shortenedRank": "WebDev",
+    "legacyRankColour": {
+      "main": "#aa0000",
+      "sub": "#ff5555"
+    },
+    "rankBadge": "nextgen/badges/rank_webdev.svg",
+    "restricted": false
+  }
+}

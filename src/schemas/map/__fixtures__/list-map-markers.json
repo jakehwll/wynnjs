@@ -1,0 +1,9 @@
+[
+  {
+    "name": "Example Marker",
+    "icon": "example_icon.png",
+    "x": "100",
+    "y": "64",
+    "z": "-100"
+  }
+]

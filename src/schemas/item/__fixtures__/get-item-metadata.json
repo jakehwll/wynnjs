@@ -1,0 +1,29 @@
+{
+  "attackSpeed": {
+    "fast": 22
+  },
+  "emblem": {
+    "diamond": 315
+  },
+  "gathering": {
+    "mining": 389
+  },
+  "identifications": {
+    "manaRegen": 28
+  },
+  "majorIds": {
+    "tidalDrift": 78
+  },
+  "set": {
+    "morph": 4
+  },
+  "subType": {
+    "spear": 123
+  },
+  "tier": {
+    "mythic": 456
+  },
+  "type": {
+    "weapon": 789
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "Morph": {
+    "internalName": "morph",
+    "bonuses": {
+      "2": {
+        "major": [],
+        "minor": {
+          "lootBonus": 5,
+          "combatExperience": 5
+        }
+      },
+      "3": {
+        "major": [],
+        "minor": {
+          "lootBonus": 10,
+          "manaRegen": 6,
+          "rawHealth": 125,
+          "raw2ndSpellCost": -5,
+          "combatExperience": 10
+        }
+      },
+      "4": {
+        "major": [],
+        "minor": {
+          "lootBonus": 15,
+          "manaRegen": 8,
+          "rawHealth": 425,
+          "rawAgility": 1,
+          "rawDefence": 1,
+          "rawStrength": 1,
+          "rawDexterity": 1,
+          "raw2ndSpellCost": -5,
+          "rawIntelligence": 1,
+          "combatExperience": 15
+        }
+      },
+      "5": {
+        "major": [],
+        "minor": {
+          "lootBonus": 35,
+          "manaRegen": 12,
+          "rawHealth": 1325,
+          "rawAgility": 1,
+          "rawDefence": 1,
+          "rawStrength": 1,
+          "rawDexterity": 1,
+          "raw2ndSpellCost": -5,
+          "raw4thSpellCost": -5,
+          "rawIntelligence": 1,
+          "combatExperience": 35
+        }
+      },
+      "6": {
+        "major": [],
+        "minor": {
+          "lootBonus": 55,
+          "manaRegen": 14,
+          "rawHealth": 2275,
+          "rawAgility": 3,
+          "rawDefence": 3,
+          "rawStrength": 3,
+          "rawDexterity": 3,
+          "raw2ndSpellCost": -5,
+          "raw4thSpellCost": -5,
+          "rawIntelligence": 3,
+          "combatExperience": 55
+        }
+      },
+      "7": {
+        "major": [],
+        "minor": {
+          "lootBonus": 80,
+          "manaRegen": 18,
+          "rawHealth": 3850,
+          "rawAgility": 3,
+          "rawDefence": 3,
+          "rawStrength": 3,
+          "rawDexterity": 3,
+          "raw1stSpellCost": -5,
+          "raw2ndSpellCost": -5,
+          "raw4thSpellCost": -5,
+          "rawIntelligence": 3,
+          "combatExperience": 80
+        }
+      },
+      "8": {
+        "major": [],
+        "minor": {
+          "lootBonus": 100,
+          "manaRegen": 24,
+          "rawHealth": 6110,
+          "rawAgility": 21,
+          "rawDefence": 21,
+          "rawStrength": 21,
+          "rawDexterity": 21,
+          "raw1stSpellCost": -5,
+          "raw2ndSpellCost": -5,
+          "raw3rdSpellCost": -5,
+          "raw4thSpellCost": -5,
+          "rawIntelligence": 21,
+          "combatExperience": 100
+        }
+      }
+    },
+    "parts": [
+      "Morph-Gold",
+      "Morph-Steel",
+      "Morph-Stardust",
+      "Morph-Iron",
+      "Morph-Amethyst",
+      "Morph-Ruby",
+      "Morph-Topaz",
+      "Morph-Emerald"
+    ]
+  }
+}

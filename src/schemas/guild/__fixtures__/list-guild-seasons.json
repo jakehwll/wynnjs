@@ -1,0 +1,48 @@
+{
+  "32": {
+    "territoryHoldingSrPerHour": 120,
+    "srPerWar": 40,
+    "ratingRewards": [
+      {
+        "condition": {
+          "type": "SR",
+          "value": 1
+        },
+        "type": "BADGE",
+        "value": "Season 32 - Contender",
+        "expires": null
+      },
+      {
+        "condition": {
+          "type": "SR",
+          "value": 200
+        },
+        "type": "EMERALD",
+        "value": 2048,
+        "expires": null
+      }
+    ],
+    "leaderboardRewards": [
+      {
+        "condition": {
+          "type": "LEADERBOARD_POSITION",
+          "value": 100
+        },
+        "type": "BADGE",
+        "value": "S32_TOP_100",
+        "expires": null
+      },
+      {
+        "condition": {
+          "type": "LEADERBOARD_POSITION",
+          "value": 1
+        },
+        "type": "BADGE",
+        "value": "S32_PLACE_1",
+        "expires": null
+      }
+    ],
+    "initDate": "2026-07-24T23:01:00Z",
+    "endDate": "2026-09-27T04:01:00Z"
+  }
+}

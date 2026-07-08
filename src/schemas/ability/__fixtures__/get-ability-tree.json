@@ -1,0 +1,75 @@
+{
+  "archetypes": {
+    "archetype": {
+      "name": "Archetype",
+      "description": "Description",
+      "shortDescription": "Test",
+      "icon": {
+        "value": {
+          "id": "minecraft:potion",
+          "name": "abilityTree.archetype",
+          "customModelData": {
+            "rangeDispatch": [193]
+          }
+        },
+        "format": "attribute",
+        "name": "abilityTree.archetype"
+      },
+      "slot": 29
+    }
+  },
+  "pages": {
+    "1": {
+      "abilityOne": {
+        "name": "Ability 1",
+        "icon": {
+          "value": {
+            "id": "minecraft:potion",
+            "name": "abilityTree.nodeBlue",
+            "customModelData": {
+              "rangeDispatch": [178]
+            }
+          },
+          "format": "attribute"
+        },
+        "slot": 4,
+        "coordinates": {
+          "x": 5,
+          "y": 1
+        },
+        "description": ["Line 1", "Line 2"],
+        "requirements": {
+          "ABILITY_POINTS": 1
+        },
+        "links": ["abilityTwo"],
+        "locks": null,
+        "page": 1
+      },
+      "abilityTwo": {
+        "name": "Ability 2",
+        "icon": {
+          "value": {
+            "id": "minecraft:potion",
+            "name": "abilityTree.nodeWhite",
+            "customModelData": {
+              "rangeDispatch": [158]
+            }
+          },
+          "format": "attribute"
+        },
+        "slot": 22,
+        "coordinates": {
+          "x": 5,
+          "y": 3
+        },
+        "description": ["Line 1", "Line 2"],
+        "requirements": {
+          "ABILITY_POINTS": 1
+        },
+        "links": ["abilityOne"],
+        "locks": null,
+        "page": 1
+      }
+    }
+  }
+}

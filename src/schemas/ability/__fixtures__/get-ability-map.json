@@ -1,0 +1,94 @@
+{
+  "1": [
+    {
+      "type": "ability",
+      "coordinates": {
+        "x": 5,
+        "y": 1
+      },
+      "meta": {
+        "page": 1,
+        "icon": {
+          "value": {
+            "id": "minecraft:potion",
+            "name": "abilityTree.exampleStarter",
+            "customModelData": {
+              "rangeDispatch": [178]
+            }
+          },
+          "format": "attribute"
+        },
+        "id": "exampleStarter"
+      },
+      "family": ["exampleStarter"]
+    },
+    {
+      "type": "connector",
+      "coordinates": {
+        "x": 5,
+        "y": 2
+      },
+      "meta": {
+        "page": 1,
+        "icon": "connector_up_down"
+      },
+      "family": ["exampleStarter", "exampleMiddle"]
+    },
+    {
+      "type": "ability",
+      "coordinates": {
+        "x": 5,
+        "y": 3
+      },
+      "meta": {
+        "page": 1,
+        "icon": {
+          "value": {
+            "id": "minecraft:potion",
+            "name": "abilityTree.exampleMiddle",
+            "customModelData": {
+              "rangeDispatch": [162]
+            }
+          },
+          "format": "attribute"
+        },
+        "id": "exampleMiddle"
+      },
+      "family": ["exampleMiddle"]
+    },
+    {
+      "type": "connector",
+      "coordinates": {
+        "x": 5,
+        "y": 4
+      },
+      "meta": {
+        "page": 1,
+        "icon": "connector_up_down"
+      },
+      "family": ["exampleMiddle", "exampleFinisher"]
+    },
+    {
+      "type": "ability",
+      "coordinates": {
+        "x": 5,
+        "y": 5
+      },
+      "meta": {
+        "page": 1,
+        "icon": {
+          "value": {
+            "id": "minecraft:potion",
+            "name": "abilityTree.exampleFinisher",
+            "customModelData": {
+              "rangeDispatch": [166]
+            }
+          },
+          "format": "attribute"
+        },
+        "id": "exampleFinisher"
+      },
+      "family": ["exampleFinisher"]
+    }
+  ]
+}

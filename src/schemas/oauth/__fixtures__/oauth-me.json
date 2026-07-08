@@ -1,0 +1,29 @@
+{
+  "application": {
+    "client_id": "9fcXAZx0_h2-1FqsTjVQzK_dnOSzmToD",
+    "scopes": ["identify", "main_access"]
+  },
+  "profiles": {
+    "98bc2236-ada5-4039-b560-8aaa4cc50384": {
+      "username": "Nepmia",
+      "primary": true,
+      "rank": "Administrator",
+      "supportRank": "champion",
+      "shortenedRank": "Admin",
+      "legacyRankColour": {
+        "main": "#aa0000",
+        "sub": "#ff5555"
+      },
+      "rankBadge": "nextgen/badges/rank_administrator.svg",
+      "accessRules": {
+        "main_access": "public",
+        "character_list_access": "public",
+        "character_data_access": "public",
+        "character_build_access": "public",
+        "online_status": "friend",
+        "hunted_characters_access": "public",
+        "guild_history_access": "public"
+      }
+    }
+  }
+}

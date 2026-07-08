@@ -1,0 +1,95 @@
+{
+  "id": 104,
+  "type": "poll",
+  "created_by": "example_author",
+  "discord_messages": {
+    "footer": "example_footer_message",
+    "header": "example_header_message",
+    "example-content-block": "example_content_message"
+  },
+  "discord_recap": false,
+  "allow_discord": true,
+  "destination": "noticeboard",
+  "published": true,
+  "pinned": true,
+  "visible": true,
+  "content": [
+    {
+      "id": "example-content-block",
+      "type": "text",
+      "focus": true,
+      "content": "Example article content.\n\nThis block is shown on both the website and Discord.",
+      "discord": true,
+      "website": true
+    },
+    {
+      "id": "example-question-block",
+      "type": "question",
+      "focus": false,
+      "content": {
+        "answers": {
+          "1778232125075-c1c9fds": "Salted",
+          "1778232133945-ln1ihl7": "Crunkle",
+          "1778232143313-gmd3s95": "HeyZeer0",
+          "1778232147271-f180s72": "Nepmia",
+          "1778232150657-3u4p736": "Michael",
+          "1778232154834-1cgzf6c": "Terminated"
+        },
+        "override": false,
+        "question": "Who is the best Admin?",
+        "requirements": [
+          {
+            "type": "content_completion",
+            "subType": "nameless",
+            "value": 25
+          }
+        ]
+      },
+      "discord": false,
+      "website": true
+    },
+    {
+      "id": "example-image-block",
+      "type": "image",
+      "focus": false,
+      "content": "poll/content/example-poll-image.png",
+      "discord": true,
+      "website": true
+    }
+  ],
+  "start_date": "2026-05-01T15:00:00Z",
+  "end_date": "2026-05-08T15:00:00Z",
+  "recap": "Example recap for a published poll article.",
+  "title": "Example Poll Article",
+  "banner": "poll/banner/example-poll-banner.png",
+  "banner_zoom": false,
+  "likes": 100,
+  "published_at": "2026-05-01T15:02:00+00:00",
+  "require_discord": true,
+  "require_clan": true,
+  "poll_settings": [
+    {
+      "type": "highest_level",
+      "subType": "combat",
+      "value": 106
+    },
+    {
+      "type": "account_age",
+      "subType": null,
+      "value": 365
+    }
+  ],
+  "poll_public": true,
+  "votes": {
+    "total": 42,
+    "example-question-block": {
+      "total": 42,
+      "1778232125075-c1c9fds": 7,
+      "1778232133945-ln1ihl7": 7,
+      "1778232143313-gmd3s95": 7,
+      "1778232147271-f180s72": 7,
+      "1778232150657-3u4p736": 7,
+      "1778232154834-1cgzf6c": 7
+    }
+  }
+}

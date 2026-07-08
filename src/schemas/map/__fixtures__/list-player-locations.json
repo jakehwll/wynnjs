@@ -1,0 +1,48 @@
+[
+  {
+    "uuid": "98bc2236-ada5-4039-b560-8aaa4cc50384",
+    "name": "Nepmia",
+    "nickname": "Neplicopter",
+    "character": "5b6ab8a0-8f7c-4f50-bd2c-bfabe22d74bc",
+    "server": "WC1",
+    "x": 100,
+    "y": 64,
+    "z": -100,
+    "friends": [
+      {
+        "uuid": "98bc2236-ada5-4039-b560-8aaa4cc50384",
+        "name": "Nepmia",
+        "nickname": "Neplicopter",
+        "character": "5b6ab8a0-8f7c-4f50-bd2c-bfabe22d74bc",
+        "server": "WC1",
+        "x": 100,
+        "y": 64,
+        "z": -100
+      }
+    ],
+    "party": [
+      {
+        "uuid": "98bc2236-ada5-4039-b560-8aaa4cc50384",
+        "name": "Nepmia",
+        "nickname": "Neplicopter",
+        "character": "5b6ab8a0-8f7c-4f50-bd2c-bfabe22d74bc",
+        "server": "WC1",
+        "x": 100,
+        "y": 64,
+        "z": -100
+      }
+    ],
+    "guild": [
+      {
+        "uuid": "98bc2236-ada5-4039-b560-8aaa4cc50384",
+        "name": "Nepmia",
+        "nickname": "Neplicopter",
+        "character": "5b6ab8a0-8f7c-4f50-bd2c-bfabe22d74bc",
+        "server": "WC1",
+        "x": 100,
+        "y": 64,
+        "z": -100
+      }
+    ]
+  }
+]

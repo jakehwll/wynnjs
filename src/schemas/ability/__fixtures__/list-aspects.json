@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Example Aspect",
+    "internalName": "example_internal_name",
+    "icon": {
+      "value": {
+        "id": "minecraft:example_item",
+        "name": "abilityTree.exampleAspect",
+        "customModelData": {
+          "rangeDispatch": [100]
+        }
+      },
+      "format": "attribute"
+    },
+    "rarity": "example_rarity",
+    "requiredClass": "example_class",
+    "tiers": {
+      "1": {
+        "threshold": 1,
+        "description": [
+          "<span class='font-ascii' style='color:#AAAAAA'>Example description for tier one.</span>"
+        ]
+      },
+      "2": {
+        "threshold": 5,
+        "description": [
+          "<span class='font-ascii' style='color:#AAAAAA'>Example description for tier two.</span>"
+        ]
+      },
+      "3": {
+        "threshold": 30,
+        "description": [
+          "<span class='font-ascii' style='color:#AAAAAA'>Example description for tier three.</span>"
+        ]
+      },
+      "4": {
+        "threshold": 150,
+        "description": [
+          "<span class='font-ascii' style='color:#AAAAAA'>Example description for tier four.</span>"
+        ]
+      }
+    }
+  }
+]

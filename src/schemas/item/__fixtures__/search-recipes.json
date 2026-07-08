@@ -1,0 +1,55 @@
+{
+  "controller": {
+    "count": 1,
+    "current_count": 1,
+    "pages": 1,
+    "prev": null,
+    "current": 1,
+    "next": null
+  },
+  "results": [
+    {
+      "internalName": "Food1-3",
+      "type": "food",
+      "skill": "cooking",
+      "level": {
+        "minimum": 1,
+        "maximum": 3
+      },
+      "materials": [
+        {
+          "item": "Refined Gudgeon Meat",
+          "amount": 2
+        },
+        {
+          "item": "Refined Wheat Grains",
+          "amount": 1
+        }
+      ],
+      "healthOrDamage": {
+        "minimum": 24,
+        "maximum": 32
+      },
+      "sprites": {
+        "default": {
+          "format": "attribute",
+          "value": {
+            "id": "minecraft:rabbit_stew",
+            "customModelData": 9,
+            "name": "consumable.foodGeneric"
+          },
+          "name": "fooddefault"
+        }
+      },
+      "xp": 20,
+      "duration": {
+        "minimum": 1080,
+        "maximum": 1116
+      },
+      "basicDuration": {
+        "minimum": 60,
+        "maximum": 60
+      }
+    }
+  ]
+}

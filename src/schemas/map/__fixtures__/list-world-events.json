@@ -1,0 +1,80 @@
+[
+  {
+    "name": "Bowels of the Roots",
+    "internalName": "deadbeef",
+    "lore": "Fight through the roots before the corruption spreads.",
+    "difficulty": "HARD",
+    "level": 30,
+    "length": "MEDIUM",
+    "rewardPerLevel": {
+      "19": ["Test Reward"]
+    },
+    "requirements": [
+      {
+        "type": "COMBAT_LEVEL",
+        "value": 25
+      }
+    ],
+    "location": [
+      {
+        "event": {
+          "x": 1,
+          "y": 2,
+          "z": 3
+        },
+        "spawn": {
+          "x": 4,
+          "y": 5,
+          "z": 6
+        },
+        "reward": {
+          "x": 7,
+          "y": 8,
+          "z": 9
+        },
+        "radius": 10,
+        "spawnRadius": 30
+      }
+    ],
+    "schedule": "2026-05-25T10:35:00+00:00"
+  },
+  {
+    "name": "Defend the Pass",
+    "internalName": "cafefeed",
+    "lore": "Hold the pass until reinforcements arrive.",
+    "difficulty": "MEDIUM",
+    "level": 65,
+    "length": "SHORT",
+    "rewardPerLevel": {
+      "65": ["Combat Experience", "Emeralds"]
+    },
+    "requirements": [
+      {
+        "type": "COMBAT_LEVEL",
+        "value": 60
+      }
+    ],
+    "location": [
+      {
+        "event": {
+          "x": 120,
+          "y": 72,
+          "z": -540
+        },
+        "spawn": {
+          "x": 122,
+          "y": 72,
+          "z": -535
+        },
+        "reward": {
+          "x": 118,
+          "y": 72,
+          "z": -548
+        },
+        "radius": 12,
+        "spawnRadius": 20
+      }
+    ],
+    "schedule": null
+  }
+]

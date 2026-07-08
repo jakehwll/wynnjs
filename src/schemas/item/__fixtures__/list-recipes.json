@@ -1,0 +1,51 @@
+{
+  "controller": {
+    "count": 3,
+    "current_count": 1,
+    "pages": 3,
+    "prev": 1,
+    "current": 2,
+    "next": 3
+  },
+  "results": [
+    {
+      "internalName": "Boots1-3",
+      "type": "boots",
+      "skill": "tailoring",
+      "level": {
+        "minimum": 1,
+        "maximum": 3
+      },
+      "materials": [
+        {
+          "item": "Refined Copper Ingot",
+          "amount": 1
+        },
+        {
+          "item": "Refined Wheat String",
+          "amount": 2
+        }
+      ],
+      "healthOrDamage": {
+        "minimum": 9,
+        "maximum": 11
+      },
+      "sprites": {
+        "default": {
+          "format": "attribute",
+          "value": {
+            "id": "minecraft:leather_boots",
+            "customModelData": 1,
+            "name": "boots.leather"
+          },
+          "name": "itemdefault"
+        }
+      },
+      "xp": 20,
+      "durability": {
+        "minimum": 175000,
+        "maximum": 182000
+      }
+    }
+  ]
+}

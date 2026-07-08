@@ -1,0 +1,100 @@
+{
+  "query": "Bo",
+  "players": {
+    "98bc2236-ada5-4039-b560-8aaa4cc50384": "Nepmia"
+  },
+  "guilds": {
+    "adb5f0b5-5289-439c-9293-a29d220e7152": {
+      "name": "Spectral Cabbage",
+      "prefix": "SPC"
+    }
+  },
+  "items": [
+    {
+      "displayName": "Idol",
+      "internalName": "Idol",
+      "type": "weapon",
+      "subType": "spear",
+      "icon": {
+        "value": {
+          "id": "minecraft:potion",
+          "name": "spear.water3",
+          "customModelData": {
+            "rangeDispatch": [3024]
+          }
+        },
+        "format": "attribute"
+      },
+      "emblem": "diamond_5",
+      "tier": "mythic",
+      "attackSpeed": "normal",
+      "averageDps": 533,
+      "restriction": "none",
+      "dropRestriction": "normal",
+      "elements": ["water"],
+      "requirements": {
+        "level": 95,
+        "classRequirement": "warrior",
+        "intelligence": 120
+      },
+      "majorIds": {
+        "Tidal Drift": "<span class='font-ascii' style='color:#AAAAAA'>Flying Kick will instead send you forwards. This effect is limited to once per Charge cast.</span>"
+      },
+      "powderSlots": 3,
+      "lore": "<span class='font-ascii' style='color:#AAAAAA'>Intricate carvings and images, almost like that of a totem pole, cover the shaft of this marvelous trident, dredged up from the Seavale Reef. Foreign magics heighten the senses of its user in battle, but also instills a longing for the ocean. Many have succumbed to this urge and drowned themselves.</span>",
+      "identifications": {
+        "manaRegen": {
+          "min": 3,
+          "raw": 10,
+          "max": 13
+        },
+        "reflection": {
+          "min": 9,
+          "raw": 30,
+          "max": 39
+        },
+        "waterDefence": {
+          "min": 5,
+          "raw": 15,
+          "max": 20
+        },
+        "rawIntelligence": 26,
+        "rawSpellDamage": {
+          "min": 79,
+          "raw": 264,
+          "max": 343
+        },
+        "raw2ndSpellCost": {
+          "min": -15,
+          "raw": -50,
+          "max": -65
+        }
+      },
+      "base": {
+        "baseWaterDamage": {
+          "min": 220,
+          "raw": 220,
+          "max": 300
+        }
+      }
+    }
+  ],
+  "guildsPrefix": {
+    "adb5f0b5-5289-439c-9293-a29d220e7152": {
+      "name": "Spectral Cabbage",
+      "prefix": "SPC"
+    }
+  },
+  "territories": {
+    "Ragni": {
+      "start": [-955, -1415],
+      "end": [-756, -1748]
+    }
+  },
+  "discoveries": {
+    "Ragni": {
+      "start": [-955, -1415],
+      "end": [-756, -1748]
+    }
+  }
+}
