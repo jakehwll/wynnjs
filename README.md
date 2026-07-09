@@ -37,11 +37,11 @@ const client = new WynnClient({
 });
 ```
 
-Endpoints like `client.player.whoAmI()` and `client.oauth.me()` require auth. See [`examples/auth-token.ts`](./examples/auth-token.ts).
+Endpoints like `client.player.whoAmI()` and `client.oauth.me()` require auth. See [`examples/auth-token.ts`](./packages/api/examples/auth-token.ts).
 
 ### Errors
 
-Failed API responses throw `WynnApiError` subclasses (`NotFound`, `Forbidden`, `TooManyRequest`, `MultipleObjectsReturned`, etc.). See [`examples/errors.ts`](./examples/errors.ts).
+Failed API responses throw `WynnApiError` subclasses (`NotFound`, `Forbidden`, `TooManyRequest`, `MultipleObjectsReturned`, etc.). See [`examples/errors.ts`](./packages/api/examples/errors.ts).
 
 ## API reference
 
@@ -139,20 +139,20 @@ Failed API responses throw `WynnApiError` subclasses (`NotFound`, `Forbidden`, `
 
 ## Examples
 
-Runnable scripts live in [`examples/`](./examples/). Run with `bun run examples/basic.ts` from the repo root.
+Runnable scripts live in [`packages/api/examples/`](./packages/api/examples/). Run with `bun run packages/api/examples/basic.ts` from the repo root.
 
-| File                                                    | Module                      |
-| ------------------------------------------------------- | --------------------------- |
-| [`basic.ts`](./examples/basic.ts)                       | classes                     |
-| [`player.ts`](./examples/player.ts)                     | player                      |
-| [`auth-token.ts`](./examples/auth-token.ts)             | player (API token)          |
-| [`oauth.ts`](./examples/oauth.ts)                       | oauth                       |
-| [`guild-and-search.ts`](./examples/guild-and-search.ts) | search, guild, leaderboards |
-| [`item-search.ts`](./examples/item-search.ts)           | item                        |
-| [`map.ts`](./examples/map.ts)                           | map                         |
-| [`news.ts`](./examples/news.ts)                         | news                        |
-| [`ability.ts`](./examples/ability.ts)                   | ability                     |
-| [`errors.ts`](./examples/errors.ts)                     | error handling              |
+| File                                                                 | Module                      |
+| -------------------------------------------------------------------- | --------------------------- |
+| [`basic.ts`](./packages/api/examples/basic.ts)                       | classes                     |
+| [`player.ts`](./packages/api/examples/player.ts)                     | player                      |
+| [`auth-token.ts`](./packages/api/examples/auth-token.ts)             | player (API token)          |
+| [`oauth.ts`](./packages/api/examples/oauth.ts)                       | oauth                       |
+| [`guild-and-search.ts`](./packages/api/examples/guild-and-search.ts) | search, guild, leaderboards |
+| [`item-search.ts`](./packages/api/examples/item-search.ts)           | item                        |
+| [`map.ts`](./packages/api/examples/map.ts)                           | map                         |
+| [`news.ts`](./packages/api/examples/news.ts)                         | news                        |
+| [`ability.ts`](./packages/api/examples/ability.ts)                   | ability                     |
+| [`errors.ts`](./packages/api/examples/errors.ts)                     | error handling              |
 
 ## Contributing
 

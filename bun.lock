@@ -1,11 +1,9 @@
 {
   "lockfileVersion": 1,
+  "configVersion": 0,
   "workspaces": {
     "": {
       "name": "wynnjs",
-      "dependencies": {
-        "axios": "^1.18.1",
-      },
       "devDependencies": {
         "@types/axios-mock-adapter": "^1.10.4",
         "@types/bun": "latest",
@@ -13,6 +11,21 @@
         "axios-mock-adapter": "^2.1.0",
         "oxfmt": "^0.58.0",
         "oxlint": "^1.73.0",
+        "tsup": "^8.5.1",
+        "typescript": "^5",
+        "vitest": "^4.1.10",
+        "zod": "^4.4.3",
+      },
+    },
+    "packages/api": {
+      "name": "@wynnjs/api",
+      "version": "3.0.0",
+      "dependencies": {
+        "axios": "^1.18.1",
+      },
+      "devDependencies": {
+        "@types/axios-mock-adapter": "^1.10.4",
+        "axios-mock-adapter": "^2.1.0",
         "tsup": "^8.5.1",
         "typescript": "^5",
         "vitest": "^4.1.10",
@@ -281,6 +294,8 @@
     "@vitest/spy": ["@vitest/spy@4.1.10", "", {}, "sha512-PLf/Ugvoq5wO/b4rwYCR1h2PSIdXz7wnkQFMiUpLdtM7l6pqVFcQIBEHyT1+l+cj7mNwAfZHzqXqDyjvOuwbDw=="],
 
     "@vitest/utils": ["@vitest/utils@4.1.10", "", { "dependencies": { "@vitest/pretty-format": "4.1.10", "convert-source-map": "^2.0.0", "tinyrainbow": "^3.1.0" } }, "sha512-fy9am/HWxbaGt/Sawrp90vt6Y6jQwf1RX77cz3uwoJwJVMli/e1IEwRPnMNJ7vKfPTwo0diXifkpPvwH9v7nGA=="],
+
+    "@wynnjs/api": ["@wynnjs/api@workspace:packages/api"],
 
     "acorn": ["acorn@8.17.0", "", { "bin": { "acorn": "bin/acorn" } }, "sha512-xRQbDb9BnwDafYNn6Vwl839DYVjqXYb1XVGtWAZ1kcDc6iwAL4hg3B1dZlRiuENFeO2H53gFG3in621AdERVAg=="],
 
