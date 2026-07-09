@@ -1,0 +1,18 @@
+{
+  "name": "@wynnjs/docs",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "sync:changelog": "bun run scripts/sync-changelog.ts",
+    "predev": "bun run sync:changelog",
+    "prebuild": "bun run sync:changelog",
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.4",
+    "vitepress-plugin-group-icons": "^1.7.5",
+    "vue": "^3.5.39"
+  }
+}

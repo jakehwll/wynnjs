@@ -33,8 +33,12 @@ Useful individual commands:
 | `bun run typecheck:examples`              | Typecheck examples against built `dist/` |
 | `bun run lint` / `bun run lint:fix`       | Oxlint                                   |
 | `bun run format` / `bun run format:check` | Oxfmt                                    |
-| `bun run build`                           | Build `packages/api/dist/` via tsup      |
+| `bun run build`                           | Build workspace packages (api + docs)    |
+| `bun run docs`                            | Dev server for VitePress docs            |
+| `bun run docs:build`                      | Build static docs site                   |
 | `bun run test:fixtures`                   | Refresh doc example JSON fixtures        |
+
+Docs deploy to [GitHub Pages](https://jakehwll.github.io/wynnjs/) via [`.github/workflows/docs.yml`](.github/workflows/docs.yml) on pushes to `main`. In the repo settings, set **Pages → Source** to **GitHub Actions**. VitePress `base` is `/wynnjs/`.
 
 ## Project layout
 
@@ -50,6 +54,8 @@ packages/
       testing/         # Shared test helpers
     examples/          # Runnable usage samples
     scripts/           # Fixture sync and tooling
+apps/
+  docs/                # VitePress site (@wynnjs/docs)
 ```
 
 The published package ships `dist/`, plus `README.md` and `LICENSE` from `packages/api/`. Source lives under `packages/api/src/`.
@@ -179,7 +185,7 @@ Publishing runs in GitHub Actions via [npm trusted publishing](https://docs.npmj
 
 ### Release flow
 
-1. Bump `version` in `packages/api/package.json` and add a `CHANGELOG.md` entry.
+1. Bump `version` in `packages/api/package.json` and add a root `CHANGELOG.md` entry (docs sync it automatically on `docs` / `docs:build`).
 2. Merge to `main`.
 3. Create a GitHub Release with tag `vX.Y.Z` (must match `packages/api/package.json`, e.g. `v3.0.0`).
 4. The [Publish workflow](.github/workflows/publish.yml) runs CI, verifies the tag, and publishes with provenance via OIDC.

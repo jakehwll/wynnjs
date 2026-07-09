@@ -5,7 +5,14 @@
     "correctness": "error"
   },
   "rules": {},
-  "ignorePatterns": ["dist/**", "node_modules/**", "bun.lock", "*.tgz"],
+  "ignorePatterns": [
+    "dist/**",
+    "node_modules/**",
+    "bun.lock",
+    "*.tgz",
+    "apps/docs/.vitepress/cache/**",
+    "apps/docs/.vitepress/dist/**"
+  ],
   "env": {
     "builtin": true
   }

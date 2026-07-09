@@ -45,7 +45,7 @@ jobs:
         run: bun run typecheck:examples
 
       - name: Verify package contents
-        run: npm pack --dry-run --workspaces
+        run: npm pack --dry-run -w @wynnjs/api
 
   consumer-check:
     name: Node consumer smoke test
@@ -72,7 +72,7 @@ jobs:
         run: |
           bun install --frozen-lockfile
           bun run build
-          npm pack --workspaces
+          npm pack -w @wynnjs/api
 
       - name: Install tarball and import
         run: |
