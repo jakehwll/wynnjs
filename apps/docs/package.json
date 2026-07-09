@@ -2,6 +2,12 @@
   "name": "@wynnjs/docs",
   "private": true,
   "type": "module",
+  "homepage": "https://jakehwll.github.io/wynnjs/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jakehwll/wynnjs.git",
+    "directory": "apps/docs"
+  },
   "scripts": {
     "sync:changelog": "bun run scripts/sync-changelog.ts",
     "predev": "bun run sync:changelog",
