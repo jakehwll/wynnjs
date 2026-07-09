@@ -59,6 +59,7 @@
   "devDependencies": {
     "@types/axios-mock-adapter": "^1.10.4",
     "@types/bun": "latest",
+    "@types/node": "^26.1.1",
     "axios-mock-adapter": "^2.1.0",
     "oxfmt": "^0.58.0",
     "oxlint": "^1.73.0",
