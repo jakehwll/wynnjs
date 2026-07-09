@@ -2,12 +2,12 @@
   "name": "wynnjs",
   "private": true,
   "homepage": "https://jakehwll.github.io/wynnjs/",
+  "bugs": {
+    "url": "https://github.com/jakehwll/wynnjs/issues"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jakehwll/wynnjs.git"
-  },
-  "bugs": {
-    "url": "https://github.com/jakehwll/wynnjs/issues"
   },
   "workspaces": [
     "packages/*",
