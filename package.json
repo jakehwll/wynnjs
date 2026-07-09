@@ -1,60 +1,21 @@
 {
-  "name": "@wynnjs/api",
-  "version": "3.0.0",
-  "description": "TypeScript client for the Wynncraft API v3",
-  "keywords": [
-    "api",
-    "client",
-    "sdk",
-    "typescript",
-    "wynn",
-    "wynncraft"
+  "name": "wynnjs",
+  "private": true,
+  "workspaces": [
+    "packages/*"
   ],
-  "homepage": "https://github.com/jakehwll/wynnjs#readme",
-  "bugs": {
-    "url": "https://github.com/jakehwll/wynnjs/issues"
-  },
-  "license": "MIT",
-  "author": "Jake Howell (https://github.com/jakehwll)",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jakehwll/wynnjs.git"
-  },
-  "files": [
-    "dist"
-  ],
-  "type": "module",
-  "sideEffects": false,
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs",
-      "default": "./dist/index.js"
-    }
-  },
-  "publishConfig": {
-    "access": "public"
-  },
   "scripts": {
-    "build": "tsup",
-    "prepublishOnly": "bun run build",
-    "typecheck": "tsc --noEmit",
-    "typecheck:examples": "tsc --noEmit -p tsconfig.examples.json",
+    "build": "bun run --filter '@wynnjs/*' --if-present build",
+    "typecheck": "bun run --filter '@wynnjs/*' --if-present typecheck",
+    "typecheck:examples": "bun run --filter '@wynnjs/*' --if-present typecheck:examples",
     "lint": "oxlint .",
     "lint:fix": "oxlint . --fix",
     "format": "oxfmt .",
     "format:check": "oxfmt . --check",
-    "test": "vitest run",
-    "test:watch": "vitest",
-    "test:fixtures": "bun run scripts/sync-fixtures.ts",
-    "ci": "bun run lint && bun run format:check && bun run typecheck && bun run test && bun run build && bun run typecheck:examples && npm pack --dry-run"
-  },
-  "dependencies": {
-    "axios": "^1.18.1"
+    "test": "bun run --filter '@wynnjs/*' --if-present test",
+    "test:watch": "bun run --filter '@wynnjs/*' --if-present test:watch",
+    "test:fixtures": "bun run --filter '@wynnjs/*' --if-present test:fixtures",
+    "ci": "bun run lint && bun run format:check && bun run typecheck && bun run test && bun run build && bun run typecheck:examples && npm pack --dry-run --workspaces"
   },
   "devDependencies": {
     "@types/axios-mock-adapter": "^1.10.4",
@@ -67,9 +28,6 @@
     "typescript": "^5",
     "vitest": "^4.1.10",
     "zod": "^4.4.3"
-  },
-  "peerDependencies": {
-    "zod": "^4.4.0"
   },
   "engines": {
     "node": ">=18"

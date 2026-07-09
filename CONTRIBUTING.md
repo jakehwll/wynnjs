@@ -25,52 +25,54 @@ That runs lint, format check, typecheck, tests, build, example typecheck, and a 
 
 Useful individual commands:
 
-| Command                                   | Purpose                                     |
-| ----------------------------------------- | ------------------------------------------- |
-| `bun run test`                            | Run all Vitest tests                        |
-| `bun run test:watch`                      | Watch mode                                  |
-| `bun run typecheck`                       | `tsc --noEmit` (src)                        |
-| `bun run typecheck:examples`              | Typecheck `examples/` against built `dist/` |
-| `bun run lint` / `bun run lint:fix`       | Oxlint                                      |
-| `bun run format` / `bun run format:check` | Oxfmt                                       |
-| `bun run build`                           | Build `dist/` via tsup                      |
-| `bun run test:fixtures`                   | Refresh doc example JSON fixtures           |
+| Command                                   | Purpose                                  |
+| ----------------------------------------- | ---------------------------------------- |
+| `bun run test`                            | Run all Vitest tests                     |
+| `bun run test:watch`                      | Watch mode                               |
+| `bun run typecheck`                       | `tsc --noEmit` (`packages/api/src`)      |
+| `bun run typecheck:examples`              | Typecheck examples against built `dist/` |
+| `bun run lint` / `bun run lint:fix`       | Oxlint                                   |
+| `bun run format` / `bun run format:check` | Oxfmt                                    |
+| `bun run build`                           | Build `packages/api/dist/` via tsup      |
+| `bun run test:fixtures`                   | Refresh doc example JSON fixtures        |
 
 ## Project layout
 
 ```
-src/
-  client.ts          # WynnClient entry point
-  modules/           # API modules (player, guild, item, …)
-  schemas/           # Zod schemas + exported types, grouped by domain
-    <module>/
-      __fixtures__/  # Doc example JSON for schema tests
-  testing/           # Shared test helpers
-examples/            # Runnable usage samples
-scripts/             # Fixture sync and tooling
+packages/
+  api/                 # published @wynnjs/api
+    src/
+      client.ts        # WynnClient entry point
+      modules/         # API modules (player, guild, item, …)
+      schemas/         # Zod schemas + exported types, grouped by domain
+        <module>/
+          __fixtures__/  # Doc example JSON for schema tests
+      testing/         # Shared test helpers
+    examples/          # Runnable usage samples
+    scripts/           # Fixture sync and tooling
 ```
 
-The published package only ships `dist/`. Source lives under `src/`.
+The published package ships `dist/`, plus `README.md` and `LICENSE` from `packages/api/`. Source lives under `packages/api/src/`.
 
 ## Making changes
 
 ### Adding or updating an endpoint
 
-Most endpoint work touches three places:
+Most endpoint work touches three places under `packages/api/`:
 
-1. **Schema** — `src/schemas/<module>/<endpoint>.ts`
+1. **Schema** — `packages/api/src/schemas/<module>/<endpoint>.ts`
    - Define Zod schemas for request options and response shapes
    - Export inferred TypeScript types
 
-2. **Module method** — `src/modules/<module>.ts`
+2. **Module method** — `packages/api/src/modules/<module>.ts`
    - Add or update the client method that calls `this.client.request()`
    - Document params and return shape with JSDoc (`@param`, `@returns`)
 
 3. **Tests**
-   - Schema fixture test in `src/schemas/<module>/<module>.test.ts` using `expectDocExample()`
+   - Schema fixture test in `packages/api/src/schemas/<module>/<module>.test.ts` using `expectDocExample()`
    - Unit or integration tests colocated with the code they cover (`*.test.ts` next to the source file)
 
-Re-export new types from `src/schemas/index.ts` if needed. The root `src/index.ts` re-exports everything from schemas automatically.
+Re-export new types from `packages/api/src/schemas/index.ts` if needed. The package `src/index.ts` re-exports everything from schemas automatically.
 
 ### HTTP conventions
 
@@ -95,7 +97,7 @@ Use `@param` for each argument (including nested option fields like `options.pag
 
 ### Examples
 
-If you add a new common workflow, consider a small runnable sample in `examples/`. Use fictional usernames and UUIDs — do not commit real player data.
+If you add a new common workflow, consider a small runnable sample in `packages/api/examples/`. Use fictional usernames and UUIDs — do not commit real player data.
 
 ## Tests
 
@@ -120,11 +122,11 @@ Review the diff carefully before committing — fixtures should reflect the offi
 
 ### Unit tests
 
-Pure helpers (`auth`, `http`, `errors`) have focused unit tests colocated in `src/*.test.ts`.
+Pure helpers (`auth`, `http`, `errors`) have focused unit tests colocated in `packages/api/src/*.test.ts`.
 
 ### Integration tests
 
-`src/client.test.ts` uses `axios-mock-adapter` to verify request wiring without hitting the live API.
+`packages/api/src/client.test.ts` uses `axios-mock-adapter` to verify request wiring without hitting the live API.
 
 ## Code style
 
@@ -152,9 +154,9 @@ CI must pass before merge. It runs the same checks as `bun run ci` plus a Node c
 
 ## Versioning
 
-The npm package uses independent semver (currently `3.0.0`). The Wynncraft API release the client targets is `WYNNCRAFT_API_VERSION` in `src/constants.ts` (currently `3.7.2`).
+The npm package uses independent semver (currently `3.0.0`). The Wynncraft API release the client targets is `WYNNCRAFT_API_VERSION` in `packages/api/src/constants.ts` (currently `3.7.2`).
 
-- **Client release** (`package.json` `version`) — bump for fixes, features, or breaking client changes (`3.0.1`, `3.1.0`, `4.0.0`, …).
+- **Client release** (`packages/api/package.json` `version`) — bump for fixes, features, or breaking client changes (`3.0.1`, `3.1.0`, `4.0.0`, …).
 - **API alignment** (`WYNNCRAFT_API_VERSION`) — update when you realign schemas and methods to a new Wynncraft API release. Note the change in `CHANGELOG.md`; bump the client major/minor if the API delta is breaking for consumers.
 
 ## Publishing to npm
@@ -173,13 +175,13 @@ Publishing runs in GitHub Actions via [npm trusted publishing](https://docs.npmj
 4. Save the trusted publisher.
 5. Optional hardening (recommended with 2FA): **Settings → Publishing access → Require two-factor authentication and disallow tokens**. Trusted publishing still works; revoke any old automation publish tokens.
 
-`package.json` `repository.url` must match the GitHub repo (`git+https://github.com/jakehwll/wynnjs.git`).
+`packages/api/package.json` `repository.url` must match the GitHub repo (`git+https://github.com/jakehwll/wynnjs.git`).
 
 ### Release flow
 
-1. Bump `version` in `package.json` and add a `CHANGELOG.md` entry.
+1. Bump `version` in `packages/api/package.json` and add a `CHANGELOG.md` entry.
 2. Merge to `main`.
-3. Create a GitHub Release with tag `vX.Y.Z` (must match `package.json`, e.g. `v3.0.0`).
+3. Create a GitHub Release with tag `vX.Y.Z` (must match `packages/api/package.json`, e.g. `v3.0.0`).
 4. The [Publish workflow](.github/workflows/publish.yml) runs CI, verifies the tag, and publishes with provenance via OIDC.
 
 To publish without a release, use **Actions → Publish → Run workflow** on `main`.
