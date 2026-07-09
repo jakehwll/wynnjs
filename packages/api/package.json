@@ -10,7 +10,7 @@
     "wynn",
     "wynncraft"
   ],
-  "homepage": "https://github.com/jakehwll/wynnjs#readme",
+  "homepage": "https://github.com/jakehwll/wynnjs/tree/main/packages/api#readme",
   "bugs": {
     "url": "https://github.com/jakehwll/wynnjs/issues"
   },
@@ -22,7 +22,9 @@
     "directory": "packages/api"
   },
   "files": [
-    "dist"
+    "dist",
+    "LICENSE",
+    "README.md"
   ],
   "type": "module",
   "sideEffects": false,

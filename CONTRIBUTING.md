@@ -52,7 +52,7 @@ packages/
     scripts/           # Fixture sync and tooling
 ```
 
-The published package only ships `dist/`. Source lives under `packages/api/src/`.
+The published package ships `dist/`, plus `README.md` and `LICENSE` from `packages/api/`. Source lives under `packages/api/src/`.
 
 ## Making changes
 
