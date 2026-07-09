@@ -6,7 +6,10 @@ const { data: searchResults } = await client.search.search("archer", {
   only: "item",
 });
 
-console.log(searchResults.query, Object.keys(searchResults.items ?? {}));
+console.log(
+  searchResults.query,
+  (searchResults.items ?? []).map((item) => item.internalName),
+);
 
 // Replace with a real guild name, prefix, or UUID.
 const guildName = "Example Guild";

@@ -20,18 +20,20 @@ type GlobalSearchResult = {
   players?: Record<string, string>; // uuid → username (or similar)
   guilds?: Record<string, { name: string; prefix: string }>;
   guildsPrefix?: Record<string, { name: string; prefix: string }>;
-  items?: Record<string, ItemSummary>; // same list shape as item module
+  items?: Item[]; // array — same `ItemList` as item quick-search, not a record
   territories?: Record<string, { start: unknown[]; end: unknown[] }>;
   discoveries?: Record<string, { start: unknown[]; end: unknown[] }>;
 };
 ```
 
+Unlike `players` / `guilds`, **`items` is an array**. Do not use `Object.keys` on it.
+
 ```ts
 const { data } = await client.search.search("cabbage", { only: "item" });
 
 console.log(data.query);
-if (data.items) {
-  console.log(Object.keys(data.items));
+for (const item of data.items ?? []) {
+  console.log(item.internalName, item.displayName, item.tier);
 }
 ```
 
