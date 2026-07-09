@@ -2,12 +2,13 @@
   "name": "wynnjs",
   "private": true,
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "apps/*"
   ],
   "scripts": {
     "build": "bun run --filter '@wynnjs/*' --if-present build",
     "typecheck": "bun run --filter '@wynnjs/*' --if-present typecheck",
-    "typecheck:examples": "bun run --filter '@wynnjs/*' --if-present typecheck:examples",
+    "typecheck:examples": "bun run --filter '@wynnjs/api' --if-present typecheck:examples",
     "lint": "oxlint .",
     "lint:fix": "oxlint . --fix",
     "format": "oxfmt .",
@@ -15,7 +16,10 @@
     "test": "bun run --filter '@wynnjs/*' --if-present test",
     "test:watch": "bun run --filter '@wynnjs/*' --if-present test:watch",
     "test:fixtures": "bun run --filter '@wynnjs/*' --if-present test:fixtures",
-    "ci": "bun run lint && bun run format:check && bun run typecheck && bun run test && bun run build && bun run typecheck:examples && npm pack --dry-run --workspaces"
+    "docs": "bun run --filter @wynnjs/docs dev",
+    "docs:build": "bun run --filter @wynnjs/docs build",
+    "docs:preview": "bun run --filter @wynnjs/docs preview",
+    "ci": "bun run lint && bun run format:check && bun run typecheck && bun run test && bun run build && bun run typecheck:examples && npm pack --dry-run -w @wynnjs/api"
   },
   "devDependencies": {
     "@types/axios-mock-adapter": "^1.10.4",
