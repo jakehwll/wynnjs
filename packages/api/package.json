@@ -58,7 +58,7 @@
     "@types/axios-mock-adapter": "^1.10.4",
     "axios-mock-adapter": "^2.1.0",
     "tsup": "^8.5.1",
-    "typescript": "^5",
+    "typescript": "^7",
     "vitest": "^4.1.10",
     "zod": "^4.4.3"
   },
